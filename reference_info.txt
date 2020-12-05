@@ -1,0 +1,27 @@
+Home Latitude: 45.067846
+
+Home Longitude: -93.424426
+
+https://developer.climacell.co/v3/reference#get-realtime
+
+https://developer.climacell.co/v3/docs/present#section-realtime
+
+Realtime
+descriptive
+
+Access hyper-local ground-data based on a hybrid of traditional weather sources and our own sensing technology comprised of millions of cell towers and IoT sensors.
+
+Available fields:
+Layer	Fields
+Weather	
+precipitation, precipitation_type, temp, feels_like, dewpoint, wind_speed, wind_gust, baro_pressure, visibility, humidity, wind_direction, sunrise, sunset, cloud_cover, cloud_ceiling, cloud_base, surface_shortwave_radiation, moon_phase, weather_code
+
+Air Quality	All fields
+Pollen	All fields (pollen_tree, pollen_grass and pollen_weed category species only available in US)
+Road Risk	All fields (road_risk_confidence and road_risk_conditions only available in EU and US)
+Fire Index	All fields
+
+Sample call for windspeed, temp 
+
+curl --request GET \
+  --url 'https://api.climacell.co/v3/weather/realtime?lat=45.067846&lon=-93.424426&unit_system=us&fields=temp%2Cwind_speed&apikey=REDACTED'
